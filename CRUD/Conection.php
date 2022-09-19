@@ -1,9 +1,13 @@
 <?php 
 
-define('Host', '127.0.0.1');
-define('User', 'root'     );
-define('Pass', ''         );
-define('Base', 'aula'     );
+$username = "root";
+$password = '';
+$banco    = "aula";
+$host     = "127.0.0.1";
 
-
-$conexao = new MySQLi(Host, User, Pass, Base);
+try{
+    $conexao = new PDO("mysql:host={$host}; dbname={$banco}", $username, $password);
+    $conexao->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch (PDOException $e) {
+    echo "Erro: {$e->getMessage()}";
+}
