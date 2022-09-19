@@ -1,6 +1,7 @@
 <?php 
 
 	include('./Conection.php');
+	require_once('./insert.php');
 
 ?>
 
@@ -26,10 +27,10 @@
 			<div class="collapse navbar-collapse">
 				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
 					<li class="nav-item">
-						<a class="nav-link" href="index.php">Home</a>
+						<a class="nav-link" href="insert.php">CADASTRAR</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="insert.php">CADASTRAR</a>
+						<a class="nav-link" href="list.php">LISTAGEM</a>
 					</li>
 				</ul>
 			</div>
