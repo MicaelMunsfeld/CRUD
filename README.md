@@ -1,2 +1,4 @@
 # CRUD
-Ao decorrer dos dias vou adicionando mais coisas aqui.
+SISTEMAS DE INFORMAÇÃO - FASE 4
+
+Desenvolvimento de um "sistema" simples sem OB, trabalhado com CRUD(Create, Read, Update, Delete).
