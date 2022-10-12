@@ -5,7 +5,7 @@ require 'conection.php';
 
 if(isset($_POST['delete_filme'])) {
 
-    $filme_id  = mysqli_real_escape_string($oConexao, $_POST['delete_filme']);
+    $filme_id   = mysqli_real_escape_string($oConexao, $_POST['delete_filme']);
     $oQuery     = "DELETE FROM filmes WHERE codigo ='$filme_id' ";
     $oQuery_run = mysqli_query($oConexao, $oQuery);
 
@@ -30,7 +30,7 @@ if(isset($_POST['update_filme'])) {
     $imagem       = mysqli_real_escape_string($oConexao, $_POST['imagem'      ]);
     $complementos = mysqli_real_escape_string($oConexao, $_POST['complementos']);
 
-    $oQuery = "UPDATE filmes SET nome='$nome', resumo='$resumo', ano='$ano', imagem='$imagem', complementos='$complementos' WHERE codigo ='$filme_id' ";
+    $oQuery     = "UPDATE filmes SET nome='$nome', resumo='$resumo', ano='$ano', imagem='$imagem', complementos='$complementos' WHERE codigo ='$filme_id' ";
     $oQuery_run = mysqli_query($oConexao, $oQuery);
 
     if($oQuery_run) {
@@ -53,7 +53,7 @@ if(isset($_POST['salvar_filme'])) {
     $imagem       = mysqli_real_escape_string($oConexao, $_POST['imagem'      ]);
     $complementos = mysqli_real_escape_string($oConexao, $_POST['complementos']);
 
-    $oQuery = "INSERT INTO filmes (nome, resumo, ano, imagem, complementos) VALUES ('$nome', '$resumo', '$ano', '$imagem', '$complementos')";
+    $oQuery     = "INSERT INTO filmes (nome, resumo, ano, imagem, complementos) VALUES ('$nome', '$resumo', '$ano', '$imagem', '$complementos')";
     $oQuery_run = mysqli_query($oConexao, $oQuery);
 
     if($oQuery_run) {
